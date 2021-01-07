@@ -58,6 +58,16 @@
                     android:textColor="@color/item_happy_place_description_text_color"
                     android:textSize="@dimen/item_happy_place_description_textSize"
                     tools:text="Description" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:gravity="end"
+                    android:fontFamily="cursive"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/item_happy_place_description_textSize"
+                    tools:text="Description" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
