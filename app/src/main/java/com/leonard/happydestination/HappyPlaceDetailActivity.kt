@@ -3,11 +3,14 @@ package com.leonard.happydestination
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.leonard.happydestination.models.HappyPlaceModel
 import kotlinx.android.synthetic.main.activity_happy_place_detail.*
 
 class HappyPlaceDetailActivity : AppCompatActivity() {
+
+    private var saveImageToInternalStorage: Uri? = null
 
     /**
      * This function is auto created by Android when the Activity Class is created.
@@ -36,9 +39,13 @@ class HappyPlaceDetailActivity : AppCompatActivity() {
                 onBackPressed()
             }
 
-            iv_place_image.setImageURI(Uri.parse(happyPlaceDetailModel.image))
             tv_description.text = happyPlaceDetailModel.description
+
+            iv_place_image.setImageURI(Uri.parse(happyPlaceDetailModel.image))
+            iv_place_image.visibility = View.VISIBLE
             tv_location.text = happyPlaceDetailModel.location
+            tv_location.visibility = View.VISIBLE
+            btn_view_on_map.visibility = View.VISIBLE
         }
 
         btn_view_on_map.setOnClickListener {

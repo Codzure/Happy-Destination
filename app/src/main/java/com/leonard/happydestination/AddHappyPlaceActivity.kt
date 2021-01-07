@@ -93,7 +93,7 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
         updateDateInView() // Here the calender instance what we have created before will give us the current date which is formatted in the format in function
 
         if (mHappyPlaceDetails != null) {
-            supportActionBar?.title = "Edit Happy Adventure"
+            supportActionBar?.title = "Edit Notes"
 
             et_title.setText(mHappyPlaceDetails!!.title)
             et_description.setText(mHappyPlaceDetails!!.description)
@@ -208,19 +208,19 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
 
                 when {
                     et_title.text.isNullOrEmpty() -> {
-                        Toast.makeText(this, "Title your Adventure", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Title your note", Toast.LENGTH_SHORT).show()
                     }
                     et_description.text.isNullOrEmpty() -> {
-                        Toast.makeText(this, "Describe your adventure. Make others understand.", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "Describe your note.", Toast.LENGTH_SHORT)
                                 .show()
                     }
-                    et_location.text.isNullOrEmpty() -> {
-                        Toast.makeText(this, "Please select location", Toast.LENGTH_SHORT)
-                                .show()
-                    }
-                    saveImageToInternalStorage == null -> {
-                        Toast.makeText(this, "Please add an image", Toast.LENGTH_SHORT).show()
-                    }
+//                    et_location.text.isNullOrEmpty() -> {
+//                        Toast.makeText(this, "Please select location", Toast.LENGTH_SHORT)
+//                                .show()
+//                    }
+//                    saveImageToInternalStorage == null -> {
+//                        Toast.makeText(this, "Please add an image", Toast.LENGTH_SHORT).show()
+//                    }
                     else -> {
 
                         // Assigning all the values to data model class.

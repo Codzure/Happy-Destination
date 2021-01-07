@@ -64,8 +64,12 @@ class MainActivity : AppCompatActivity() {
         if (getHappyPlacesList.size > 0) {
             rv_happy_places_list.visibility = View.VISIBLE
             tv_no_records_available.visibility = View.GONE
+            saved_notes_available.visibility = View.VISIBLE
+            notes_will_appear.visibility = View.GONE
             setupHappyPlacesRecyclerView(getHappyPlacesList)
         } else {
+            notes_will_appear.visibility = View.VISIBLE
+            saved_notes_available.visibility = View.GONE
             rv_happy_places_list.visibility = View.GONE
             tv_no_records_available.visibility = View.VISIBLE
         }
